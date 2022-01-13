@@ -1,0 +1,130 @@
+@charset "utf-8";
+
+
+
+@media all and (max-width:1220px){
+	
+	.join-process-bar-con > ol > li dl{width:100px; padding-left:10px;}
+	.join-process-bar-con > ol > li dl dt{font-size:12px;}
+	.join-process-bar-con > ol > li dl dd{font-size:13px;}
+}
+@media all and (max-width:800px){
+	
+	.join-process-bar-con > ol > li{display:block; float:left; width:33.33%; padding-left:0; background-size:8px auto}
+	.join-process-bar-con > ol > li .process-icon{float:none; display:block; width:40px; height:40px; line-height:40px; margin:0px auto;}
+	.join-process-bar-con > ol > li .process-icon i{font-size:18px; line-height:40px;}
+	.join-process-bar-con > ol > li dl{float:none; width:auto; padding-left:0; padding-top:10px; text-align:center;}
+	.join-process-bar-con > ol > li dl dt, .join-process-bar-con > ol > li dl dd{height:auto;}
+	.join-process-bar-con > ol > li dl dd{padding-top:3px;}
+
+	.member-form-con{padding:30px 0;}
+	.member-form-con-txt{padding-bottom:30px; }
+	.member-form-con-txt strong{font-size:20px; font-weight:bold; word-break:keep-all; line-height:24px;}
+	.member-form-con-txt p{width:80%; margin:0px auto; font-size:11px; line-height:16px; word-break:keep-all;}
+	.member-form-con-txt p:before{width:20px; height:1px; margin:15px auto}
+	.form-tit{text-align:center; margin-bottom:25px;}
+	.form-input{font-size:13px; height:40px;}
+
+	
+	.member-tab-list-con ul li a{height:40px; line-height:40px; font-size:14px;}
+	.member-tab-list-con ul li.selected a{height:41px;}
+}
+
+/* ******************   LOGIN  ********************** */
+@media all and (max-width:800px){
+	
+	.form-list-icon > li{margin-top:5px;}
+	.form-list-icon > li .login-input{height:40px; width:calc(100% - 30px); font-size:13px;}
+	.form-list-icon > li i{width:25px; font-size:20px;}
+	
+	.id-save-btn{font-size:12px;}
+	.id-save-btn input[type="checkbox"]{width:20px; height:20px;}
+	.form-box-list{height:44px; line-height:44px; }
+	.form-box-list a{font-size:13px;}
+	.form-box-list a:before{margin:-2px 10px 0 10px;}
+}
+
+/* ******************   LOGIN ::  SNS/SHOP  ********************** */
+@media all and (max-width:1220px){
+	.member-con-inner-shop, .member-con-inner-sns{padding:40px 25px}
+	/* LOGIN :: SNS LOGIN */
+	.member-con-inner-sns .member-form-con{padding-left:15px;}
+	.member-con-inner-sns .member-form-con:first-child{padding-right:15px;}
+	/* LOGIN :: SHOP LOGIN */
+	.member-con-inner-shop .member-form-con, .member-con-inner-shop .member-form-con:first-child{display:block; width:100%; padding:0; }
+	.member-con-inner-shop .member-form-con:first-child{border-right:0; padding-bottom:30px;}
+}
+@media all and (max-width:800px){
+	.member-con-inner-shop, .member-con-inner-sns{padding:40px 15px;}
+	/* LOGIN :: SNS LOGIN */
+	.member-con-inner-sns .member-form-con, .member-con-inner-sns .member-form-con:first-child{
+		display:block; width:100%; padding:0; max-width:480px;
+	}
+	.member-con-inner-sns .member-form-con:first-child{border-right:0; padding-bottom:30px;}
+	.member-con-inner-sns .member-form-con .sns-login-list li{padding-top:5px;}
+	.member-con-inner-sns .member-form-con .sns-login-list li a,
+	.member-con-inner-sns .member-form-con .sns-login-list li button{height:40px; text-indent:50px; font-size:14px;}
+	.member-con-inner-sns .member-form-con .sns-login-list .sns-icon{width:40px; height:40px; line-height:40px;}
+	/* LOGIN :: SHOP LOGIN */
+	.member-con-inner-shop .member-form-shop-con{width:100%; }
+	.member-con-inner-shop .member-form-shop{text-align:center; padding:20px 0;}
+	.member-con-inner-shop .member-form-shop a{max-width:none; width:100%;}
+	.member-con-inner-shop .member-form-nonmember{border-top:0; margin-top:0; padding-top:0;}
+	.member-con-inner-shop .member-form-nonmember-con{float:none; width:100%; padding:20px 0; border-top:1px solid #ddd;}
+	.member-con-inner-shop .member-form-nonmember-con:last-child:before{display:none;}
+}
+
+
+@media all and (max-width:800px){
+	
+	.id-check-inner .customer-id{font-size:15px; padding:30px 0; line-height:24px;}
+}
+
+ /* ******************  JOIN 02 / MODIFY  ********************** */
+@media all and (max-width:800px){
+	/* JOIN 01 */
+	.join-step-con{padding-bottom:0px;}
+	.join-step-con .join-tit{font-size:16px; padding-bottom:10px;}
+	.join-agreement-con{height:80px;}
+	/* JOIN 02 */
+	.essential-txt{font-size:11px; top:-20px; font-weight:300;}
+	.join-form-tbl th,.join-form-tbl td{padding:5px;}
+	.join-form-tbl th{width:30%; font-size:13px; }
+	.join-form-tbl td{width:70%;}
+	.join-form-tbl .input-basic,
+	.join-form-tbl .select-basic{height:30px; font-size:13px; text-indent:4px; max-width:300px; }
+	.join-form-tbl .select-basic{height:34px;}
+	.join-form-tbl .join-sub-btn{min-width:auto; width:45%; height:32px; max-width:150px;  margin-left:5px; font-size:12px; padding:0;}
+	.join-form-tbl .join-sub-txt, .join-form-tbl .join-sub-txt2{display:block; margin-left:0; margin-top:5px; word-break:keep-all; line-height:15px; }
+	.birth-input br{display:block;}
+	.birth-input .select-basic:first-child{margin-bottom:3px;}
+	.email-input .input-basic{margin:0;}
+	.email-input .select-basic{width:100% !important; max-width:none; margin-top:3px;}
+	.address-input .input-basic{margin-top:3px;}
+	.join-form-tbl .hypen{margin:0 2px;}
+}
+@media all and (max-width:359px){
+	.join-form-tbl .join-sub-btn{max-width:70px; font-size:11px;}
+	.email-input .input-basic{width:30% !important;}
+}
+
+
+ /* ******************  JOIN FINISH ********************** */
+@media all and (max-width:800px){
+	/* JOIN FINISH :: 01 */
+	.join-finish-icon{width:80px; height:80px; }
+	.join-finish-icon i{font-size:45px; line-height:30px}
+	.join-finish-txt{font-size:14px; line-height:1.3em; word-break:keep-all;}
+	/* JOIN FINISH :: 02 */
+	.join-finish-tit-con{height:auto; margin-bottom:20px; padding-bottom:20px; }
+	.join-finish-tit{font-size:18px; line-height:20px;  word-break:keep-all;}
+	.join-finish-sub-tit{font-size:12px; word-break:keep-all;}
+	.join-finish-member-info{padding:15px;}
+	.join-finish-member-info .member-info-left-icon{display:none;}
+	.member-info-right-con dl {margin-bottom:15px;}
+	.member-info-right-con dl dt, .member-info-right-con dl dd{float:none; width:auto; padding:0; }
+	.member-info-right-con dl dt{font-size:13px; padding-bottom:7px; }
+	.member-info-right-con dl dt i{margin-top:-2px; vertical-align:middle;}
+	.member-info-right-con dl dd{font-size:15px; color:#222; line-height:1.5; font-weight:500; padding-left:22px;}
+}
+
