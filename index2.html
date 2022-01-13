@@ -1,0 +1,1110 @@
+
+
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>경북대학교 IT대학 컴퓨터학부</title>
+<link rel="icon" type="img/png" href="../img/include/favicon.png">
+<meta name="Title" content="경북대학교 IT대학 컴퓨터학부">
+<meta name="Subject" content="경북대학교 IT대학 컴퓨터학부">
+<meta name="Author" content="경북대학교 IT대학 컴퓨터학부">
+<meta name="Keywords" content="경북대학교 IT대학 컴퓨터학부">
+<meta name="Description" content="경북대학교 IT대학 컴퓨터학부">
+<meta name="Robots" content="">
+<meta property="og:type" content="website">
+<meta property="og:title" content="경북대학교 IT대학 컴퓨터학부">
+<meta property="og:description" content="페이지 설명">
+<meta property="og:image" content="../img/include/logo.png">
+<meta property="og:url" content="">
+<!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+
+
+<link rel="shortcut icon" href="http://www.knu.ac.kr/wbbs/img/favicon.ico"/>
+
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/jquery-ui.css">
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../css/editor.css">
+<link rel="stylesheet" href="../css/layout.css">
+<link rel="stylesheet" href="../css/content.css">
+<link rel="stylesheet" href="../css/main.css" />
+<link rel="stylesheet" href="../css/board.css">
+<link rel="stylesheet" href="../css/board_responsive.css">
+<link rel="stylesheet" href="../css/member.css">
+<link rel="stylesheet" href="../css/member_responsive.css">
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>  
+<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+<!--[if lt IE 9]>
+	<script src="../js/vendor/html5shiv.js"></script>
+	<script src="../js/vendor/respond.min.js"></script>
+	<link rel="stylesheet" href="../css/ie8.css">
+<![endif]-->
+
+<!--[if lt IE 10]>
+	<link rel="stylesheet" href="../css/ie9.css">
+<![endif]-->
+
+<script type="text/javascript">
+// Common Javascript
+var _CACHE_URL = 'http://computer.knu.ac.kr';
+var _PACK_URL = 'http://computer.knu.ac.kr/pack';
+var _CURRENT_PAGE = '/main/index.html';
+</script>
+<script src="../js/vendor/jquery.easing.1.3.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/layer_popup.js"></script>
+<!-- 아이콘폰트 -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet">
+
+<!-- 메인비주얼 플러그인 -->
+<link rel="stylesheet" type="text/css" href="../css/plugin/slick.css">
+<script src="../js/plugin/slick.js"></script>
+
+<!--[if lt IE 9]>
+	<script src="../js/ie8_popup.js"></script>
+<![endif]-->
+
+<script>
+	$(window).load(function  () {
+		$(".main-visual-txt-con").addClass("active-item");
+	});
+	$(function  () {
+		dep1 = 0,
+		dep2 = 0;
+
+	// window 가로 값따라 메인 비주얼 이미지 변경
+	var w_width = window.innerWidth;
+
+	$("#mainBanner").each(function  () {
+		if ( w_width <= 800) {
+			$(this).children("img").attr("src",$(this).children("img").attr("src").replace("_pc.jpg","_m.jpg"));
+		}else {
+			$(this).children("img").attr("src",$(this).children("img").attr("src").replace("_m.jpg","_pc.jpg"));
+		}
+	});
+
+	$(window).resize(function  () {
+		var w_width = $(window).width();
+
+		$("#mainBanner").each(function  () {
+			if ( w_width <= 800) {
+				$(this).children("img").attr("src",$(this).children("img").attr("src").replace("_pc.jpg","_m.jpg"));
+			}else {
+				$(this).children("img").attr("src",$(this).children("img").attr("src").replace("_m.jpg","_pc.jpg"));
+			}
+		});
+	});
+
+	})
+</script>
+<script type="text/javascript" src="../js/nav.js"></script>
+<script type="text/javascript" src="../js/main.js"></script>
+<script type="text/javascript" src="../js/custom/common.js"></script>
+<script type="text/javascript" src="../js/jquery.form.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$.datepicker.regional['ko'] = {
+		closeText: '닫기',
+		prevText: '이전달',
+		nextText: '다음달',
+		currentText: '오늘',
+		monthNames: ['1월(JAN)','2월(FEB)','3월(MAR)','4월(APR)','5월(MAY)','6월(JUN)',
+		'7월(JUL)','8월(AUG)','9월(SEP)','10월(OCT)','11월(NOV)','12월(DEC)'],
+		monthNamesShort: ['1월','2월','3월','4월','5월','6월',
+		'7월','8월','9월','10월','11월','12월'],
+		dayNames: ['일','월','화','수','목','금','토'],
+		dayNamesShort: ['일','월','화','수','목','금','토'],
+		dayNamesMin: ['일','월','화','수','목','금','토'],
+		weekHeader: 'Wk',
+		dateFormat: 'yymmdd',
+		firstDay: 0,
+		isRTL: false,
+		showMonthAfterYear: true,
+		yearSuffix: ''};
+	$.datepicker.setDefaults($.datepicker.regional['ko']);
+
+
+	$('.datepicker').datepicker({
+		monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+		dayNamesMin: ['일','월','화','수','목','금','토'],
+		weekHeader: 'Wk',
+		dateFormat: 'yy-mm-dd',
+		autoSize: false,
+		changeYear: true,
+		changeMonth: true,
+		showButtonPanel: true,
+		currentText: '오늘 2022-01-13',
+		closeText: '닫기'
+	});
+
+});
+</script>
+<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+<script>
+    function execPostcode() {
+        new daum.Postcode({
+            oncomplete: function(data) {
+                // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+                // 각 주소의 노출 규칙에 따라 주소를 조합한다.
+                // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+                var fullAddr = ''; // 최종 주소 변수
+                var extraAddr = ''; // 조합형 주소 변수
+
+                // 사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
+                if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
+                    fullAddr = data.roadAddress;
+
+                } else { // 사용자가 지번 주소를 선택했을 경우(J)
+                    fullAddr = data.jibunAddress;
+                }
+
+                // 사용자가 선택한 주소가 도로명 타입일때 조합한다.
+                if(data.userSelectedType === 'R'){
+                    //법정동명이 있을 경우 추가한다.
+                    if(data.bname !== ''){
+                        extraAddr += data.bname;
+                    }
+                    // 건물명이 있을 경우 추가한다.
+                    if(data.buildingName !== ''){
+                        extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+                    }
+                    // 조합형주소의 유무에 따라 양쪽에 괄호를 추가하여 최종 주소를 만든다.
+                    fullAddr += (extraAddr !== '' ? ' ('+ extraAddr +')' : '');
+                }
+
+                // 우편번호와 주소 정보를 해당 필드에 넣는다.
+                document.getElementById('h_zip').value = data.zonecode; //5자리 새우편번호 사용
+                document.getElementById('h_addr1').value = fullAddr;
+
+                // 커서를 상세주소 필드로 이동한다.
+                document.getElementById('h_addr2').focus();
+            }
+        }).open();
+    }
+    function execPostcode2() {
+        new daum.Postcode({
+            oncomplete: function(data) {
+                // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+                // 각 주소의 노출 규칙에 따라 주소를 조합한다.
+                // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+                var fullAddr = ''; // 최종 주소 변수
+                var extraAddr = ''; // 조합형 주소 변수
+
+                // 사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
+                if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
+                    fullAddr = data.roadAddress;
+
+                } else { // 사용자가 지번 주소를 선택했을 경우(J)
+                    fullAddr = data.jibunAddress;
+                }
+
+                // 사용자가 선택한 주소가 도로명 타입일때 조합한다.
+                if(data.userSelectedType === 'R'){
+                    //법정동명이 있을 경우 추가한다.
+                    if(data.bname !== ''){
+                        extraAddr += data.bname;
+                    }
+                    // 건물명이 있을 경우 추가한다.
+                    if(data.buildingName !== ''){
+                        extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+                    }
+                    // 조합형주소의 유무에 따라 양쪽에 괄호를 추가하여 최종 주소를 만든다.
+                    fullAddr += (extraAddr !== '' ? ' ('+ extraAddr +')' : '');
+                }
+
+                // 우편번호와 주소 정보를 해당 필드에 넣는다.
+                document.getElementById('c_zip').value = data.zonecode; //5자리 새우편번호 사용
+                document.getElementById('c_addr1').value = fullAddr;
+
+                // 커서를 상세주소 필드로 이동한다.
+                document.getElementById('c_addr2').focus();
+            }
+        }).open();
+    }
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+	/* *********************** 탭 공통 ************************ */
+    $(".cm-tab-container").each(function  () {
+        var $cmTabList = $(this).children(".cm-tab-list");
+        var $cmTabListli = $cmTabList.find("li");
+        var $cmConWrapper = $(this).children(".cm-tab-content-wrapper");
+        var $cmContent = $cmConWrapper.children(".cm-tab-con");
+         
+         
+        // 탭 영역 숨기고 selected 클래스가 있는 영역만 보이게
+        var $selectCon = $cmTabList.find("li.selected").find("a").attr("href");
+        $cmContent.hide();
+        $($selectCon).show();
+ 
+        $cmTabListli.children("a").click(function  () {
+            if ( !$(this).parent().hasClass("selected")) {
+                var visibleCon = $(this).attr("href");
+                $cmTabListli.removeClass("selected");
+                $(this).parent("li").addClass("selected");
+                $cmContent.hide();
+                $(visibleCon).fadeIn();
+            }
+            return false;
+        });
+    });
+})
+</script>
+</head><body>
+
+
+<script>
+cookiedata = document.cookie;    
+
+</script>
+
+
+
+<!-- accessibility -->
+<div class="cm-accessibility"> <a href="#mainContainer">본문바로가기</a> </div>
+<!-- //accessibility --> 
+
+<!-- code -->
+<div id="wrap"> 
+  <!-- header -->
+  
+  <div class="gnb-overlay-bg"></div>
+<header id="header" class="">
+  <div id="headerInnerWrap">
+    <!-- S :  PC메뉴 -->
+    <nav id="gnb" class="total-menu">
+      <h2 class="blind">주메뉴</h2>
+      <div id="gnbBg"></div>
+      <ul class="menu-area clearfix menu7">
+        <div class="nav-on-icon main-move-line"> <span></span> </div>
+        <li class="logo"> <a href="../main/">
+            <div class="box-effect-wrap">
+              <div class="box-effect"> <img src="../img/include/logo-off.png" alt="" class=""> </div>
+            </div>
+          </a> </li>
+        <li class="gnb-1dep"> <a href="../01_sub/01_sub.html">
+            <div>
+              <p> <em> <span class="over">학부소개</span> <span class="off">학부소개</span> </em> </p>
+            </div>
+          </a>
+          <div class="gnb-2dep">
+            <ul>
+              <li><a href="../01_sub/01_sub.html">인사말</a></li>
+              <li><a href="../01_sub/02_sub.html">교육목표</a></li>
+              <li><a href="../01_sub/03_sub.html">연혁</a></li>
+              <li><a href="../01_sub/04_sub.html">현황</a></li>
+              <li><a href="../01_sub/05_sub.html">위치 및 연락처</a></li>
+              <li><a href="../01_sub/06_sub.html">학부관련연구소</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="gnb-1dep"> <a href="../02_sub/01_sub.html">
+            <div>
+              <p> <em> <span class="over">구성원</span> <span class="off">구성원</span> </em> </p>
+            </div>
+          </a>
+          <div class="gnb-2dep">
+            <ul>
+              <li><a href="../02_sub/01_sub.html">교수진</a></li>
+              <li><a href="../02_sub/02_sub.html">초빙교수</a></li>
+              <li><a href="../02_sub/03_sub.html">명예교수</a></li>
+              <li><a href="../02_sub/04_sub.html">직원</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="gnb-1dep"> <a href="../03_sub/07_sub.html">
+            <div>
+              <p> <em> <span class="over">학부</span> <span class="off">학부</span> </em> </p>
+            </div>
+          </a>
+          <div class="gnb-2dep">
+            <ul>
+              <li><a href="../03_sub/07_sub.html">입학정보</a></li>
+              <li><a href="../03_sub/01_sub.html">학부과정 소개</a></li>
+              <li><a href="../03_sub/02_sub.html">심화컴퓨터공학</a></li>
+              <li><a href="../03_sub/03_sub.html">글로벌SW융합</a></li>
+              <li><a href="../03_sub/04_sub.html">SW연계/융합</a></li>
+              
+              <li><a href="../03_sub/05_sub.html">입시 FAQ</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="gnb-1dep"> <a href="../04_sub/01_sub.html">
+            <div>
+              <p> <em> <span class="over">대학원</span> <span class="off">대학원</span> </em> </p>
+            </div>
+          </a>
+          <div class="gnb-2dep">
+            <ul>
+              <li><a href="../04_sub/02_sub.html">입학정보</a></li>
+              <li><a href="../04_sub/01_sub.html">연구</a></li>
+              <li><a href="../04_sub/03_sub.html">일반대학원 (BK21)</a></li>
+              <li><a href="../04_sub/04_sub.html">산업대학원</a></li>
+              <li><a href="../04_sub/05_sub.html">정보보호학과</a></li>
+              
+			  <li><a href="../04_sub/07_sub.html">데이터융합컴퓨팅학과</a></li>
+			  <li><a href="../04_sub/06_sub.html">계약학과</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="gnb-1dep"><a href="../05_sub/01_sub.html">
+            <div>
+              <p> <em> <span class="over">국제교류</span> <span class="off">국제교류</span> </em> </p>
+            </div>
+          </a>
+          <div class="gnb-2dep">
+            <ul>
+              <li><a href="../05_sub/01_sub.html#a">해외복수학위</a></li>
+              <li><a href="../05_sub/01_sub.html#b">교환학생프로그렘</a></li>
+              <li><a href="../05_sub/01_sub.html#c">국제화프로그램</a></li>
+              <li><a href="../05_sub/01_sub.html#d">해외학술교류현황</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="gnb-1dep"> <a href="../06_sub/01_sub.html">
+            <div>
+              <p> <em> <span class="over">커뮤니티</span> <span class="off">커뮤니티</span> </em> </p>
+            </div>
+          </a>
+          <div class="gnb-2dep">
+            <ul>
+              <li><a href="../06_sub/01_sub.html">뉴스</a></li>
+              <li><a href="../06_sub/02_sub.html">공지사항</a></li>
+              <li><a href="../06_sub/03_sub.html">취업정보</a></li>
+              <li><a href="../06_sub/04_sub.html">학부인재모집</a></li>
+              <li><a href="../06_sub/05_sub.html">세미나</a></li>
+              <li><a href="../06_sub/06_sub.html">학생회</a></li>
+              <li><a href="../06_sub/07_sub.html">동아리</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <!-- E :  PC메뉴 -->
+    <div class="m-logo"> <a href="../main/"><img src="../img/include/m-logo.png" alt=""></a> </div>
+  </div>
+  <div class="main-sitemap-btn-wrap  main-shadow">
+    <!-- 외국어선택 -->
+    <div class="header-util-box">
+
+      <div class="header-lang font-roboto">
+        <a href="http://computer.knu.ac.kr/eng/main/index.html">ENG</a>
+      </div>
+    </div>
+    <!-- //외국어선택 -->
+        <a href="../07_sub/01_sub.html"><img src="../img/include/icon-logout.png" alt=""></a>
+    
+  </div>
+  <!-- S :  모바일메뉴 -->
+  <!-- 외국어선택 --
+  <div class="header-util-box">
+        
+        <div class="header-lang font-roboto">
+          <a href="http://computer.knu.ac.kr/com/eng/main/index.html">ENG</a>
+        </div>
+                  </div>
+<!-- //외국어선택 -->
+  <div class="m-login-bx">
+    <div class="header-lang font-roboto">
+      <a href="http://computer.knu.ac.kr/eng/main/index.html">ENG</a>
+    </div>
+        <a href="../07_sub/01_sub.html"><img src="../img/include/icon-logout.png" alt=""></a>
+    
+  </div>
+
+  <button class="nav-open-btn" title="네비게이션 열기"> <span class="line line1"></span><span class="line line2"></span><span
+      class="line line3"></span></button>
+  <nav id="gnbM">
+    <h2 class="blind">주메뉴</h2>
+    <ul id="navigation" class="">
+      <li> <a href="javascript:;">학부소개</a>
+        <ul class="gnb-2dep">
+          <li><a href="../01_sub/01_sub.html">인사말</a></li>
+          <li><a href="../01_sub/02_sub.html">교육목표</a></li>
+          <li><a href="../01_sub/03_sub.html">연혁</a></li>
+          <li><a href="../01_sub/04_sub.html">현황</a></li>
+          <li><a href="../01_sub/05_sub.html">위치 및 연락처</a></li>
+		  <li><a href="../01_sub/06_sub.html">학부관련연구소</a></li>
+        </ul>
+      </li>
+      <li> <a href="javascript:;">구성원</a>
+        <ul class="gnb-2dep">
+          <li><a href="../02_sub/01_sub.html">교수진</a></li>
+          <li><a href="../02_sub/02_sub.html">초빙교수</a></li>
+          <li><a href="../02_sub/03_sub.html">명예교수</a></li>
+          <li><a href="../02_sub/04_sub.html">직원</a></li>
+        </ul>
+      </li>
+      <li> <a href="javascript:;">학부</a>
+        <ul class="gnb-2dep">
+          <li><a href="../03_sub/07_sub.html">입학정보</a></li>
+          <li><a href="../03_sub/01_sub.html">학부과정 소개</a></li>
+          <li><a href="../03_sub/02_sub.html">심화컴퓨터공학</a></li>
+          <li><a href="../03_sub/03_sub.html">글로벌SW융합</a></li>
+          <li><a href="../03_sub/04_sub.html">SW연계/융합</a></li>
+          
+          <li><a href="../03_sub/05_sub.html">입시 FAQ</a></li>
+        </ul>
+      </li>
+      <li> <a href="javascript:;">대학원</a>
+        <ul class="gnb-2dep">
+          <li><a href="../04_sub/02_sub.html">입학정보</a></li>
+          <li><a href="../04_sub/01_sub.html">연구</a></li>
+          <li><a href="../04_sub/03_sub.html">일반대학원 (BK21)</a></li>
+          <li><a href="../04_sub/04_sub.html">산업대학원</a></li>
+          <li><a href="../04_sub/05_sub.html">정보보호학과</a></li>
+          <li><a href="../04_sub/06_sub.html">정보과학과 (NIA)</a></li>
+		  <li><a href="../04_sub/07_sub.html">데이터융합컴퓨팅학과</a></li>
+          <!--li><a href="../03_sub/06_sub.html">학부관련연구소</a></li-->
+        </ul>
+      </li>
+      <li> <a href="javascript:;">국제교류</a>
+        <ul class="gnb-2dep">
+          <li><a href="../05_sub/01_sub.html#a">해외복수학위</a></li>
+          <li><a href="../05_sub/01_sub.html#b">교환학생프로그렘</a></li>
+          <li><a href="../05_sub/01_sub.html#c">국제화프로그램</a></li>
+          <li><a href="../05_sub/01_sub.html#d">해외학술교류현황</a></li>
+        </ul>
+      </li>
+
+      <li> <a href="javascript:;">커뮤니티</a>
+        <ul class="gnb-2dep">
+          <li><a href="../06_sub/01_sub.html">뉴스</a></li>
+          <li><a href="../06_sub/02_sub.html">공지사항</a></li>
+          <li><a href="../06_sub/03_sub.html">취업정보</a></li>
+          <li><a href="../06_sub/04_sub.html">학부인재모집</a></li>
+          <li><a href="../06_sub/05_sub.html">세미나</a></li>
+          <li><a href="../06_sub/06_sub.html">학생회</a></li>
+          <li><a href="../06_sub/07_sub.html">동아리</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <!-- E :  모바일메뉴 -->
+</header>  
+  <!-- //header --> 
+  <!-- container -->
+  <div id="mainContainer"> 
+    <!-- S : 메인비쥬얼 -->
+    <section id="mainVisual">
+      <div class="main-visual-con">
+                <div class="main-visual-item" style="cursor:pointer;" >
+          <div class="main-visual-pc-img"><img src="/pack/etc/uploads/0465557001569650540.jpg" alt=""></div>
+          <div class="main-visual-m-img"><img src="/pack/etc/uploads/0468726001569650540.jpg" alt="" /></div>
+        </div>
+                <div class="main-visual-item" style="cursor:pointer;" >
+          <div class="main-visual-pc-img"><img src="/pack/etc/uploads/0649010001569651305.jpg" alt=""></div>
+          <div class="main-visual-m-img"><img src="/pack/etc/uploads/0652072001569651305.jpg" alt="" /></div>
+        </div>
+                <div class="main-visual-item" style="cursor:pointer;" >
+          <div class="main-visual-pc-img"><img src="/pack/etc/uploads/0205890001631690425.jpg" alt=""></div>
+          <div class="main-visual-m-img"><img src="../img/blank.png" alt="" /></div>
+        </div>
+              </div>
+      <div class="main-visual-txt-con">
+        <div class="main-visual-txt-inner area clearfix">
+          <h2 class="font-gotham"> <span><em>KNU CSE</em></span> </h2>
+          <div class="main-visual-txt-bx">
+            <div class="text-wrap">
+              <p>더 넓고 더 넓게 날며 더 넓은 열린 세상을 보는<br>
+                IT대학 컴퓨터학부</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- E : 메인비쥬얼 -->
+    
+    <section id="mainContent"> 
+      <!-- S : 메인 배너 -->
+      <div class="main-area"> <a class="main-sub-menu main-sub-menu_1" href="http://knu.ac.kr/wbbs/wbbs/user/yearSchedule/index.action?menu_idx=43" target="_blank" >학사일정</a> <a class="main-sub-menu main-sub-menu_2" href="http://ssw.knu.ac.kr/" target="_blank">장학제도</a> <a class="main-sub-menu main-sub-menu_3" href="../05_sub/01_sub.html">국제교류</a> <a class="main-sub-menu main-sub-menu_4" href="http://abeek.knu.ac.kr/Keess/comm/support/main/index.action" target="_blank">공학교육인증</a> <a class="main-sub-menu main-sub-menu_5" href="http://swedu.knu.ac.kr/" target="_blank">SW교육센터</a> <a class="main-sub-menu main-sub-menu_6" href="http://ipsi1.knu.ac.kr/main.do" target="_blank">입학정보</a> </div>
+      
+      <!-- content -->
+      
+      <div class="section area" style="padding-top:20px;"> 
+      
+      
+      
+      <!-- S : 갤러리 -->
+        <div class="section2 mb-50  text-center">
+        <p class="tit"   style="text-align:center;">포토갤러리</p>
+        <p class="txt"   style="text-align:center;">컴퓨터학부의 주요 소식을 알려드립니다.</p>
+          <ul>          <li> <a href="/06_sub/02_sub_2.html?no=943&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_26" title="&lt;font color=purple&gt;[졸업] 컴퓨터학부(학사) 졸업조사표(복수,연계융합,부전공 모두포함)&lt;/font color&gt;">
+            <div class="product-img"><span class="img"><img src="/pack/bbs/uploads/Site_BBS_26/020220110103600.jpg" width="293" height="195" alt="&lt;font color=purple&gt;[졸업] 컴퓨터학부(학사) 졸업조사표(복수,연계융합,부전공 모두포함)&lt;/font color&gt;"  /></span></div>
+            <div class="product-txt">
+              <p>
+                <font color=purple>[졸업] 컴퓨터학부(학사) 졸업조사표(복수,연계융합,부전공 모두포함)</font color>              </p>
+            </div>
+            <div class="product_info"> </div>
+            </a> </li>
+                    <li> <a href="/06_sub/01_sub.html?no=482&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_14" title="[최윤자 교수 연구팀] 소프트웨어재난연구센터, 2021 공학분야 선도연구센터(ERC) 선정">
+            <div class="product-img"><span class="img"><img src="/pack/bbs/uploads/Site_BBS_14/020220105213246.jpg" width="293" height="195" alt="[최윤자 교수 연구팀] 소프트웨어재난연구센터, 2021 공학분야 선도연구센터(ERC) 선정"  /></span></div>
+            <div class="product-txt">
+              <p>
+                [최윤자 교수 연구팀] 소프트웨어재난연구센터, 2021 공학분야 선도연구센터(ERC) 선정              </p>
+            </div>
+            <div class="product_info"> </div>
+            </a> </li>
+                    <li> <a href="/06_sub/02_sub_2.html?no=890&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_26" title="&lt;font color=blue&gt;[안내] 휴학과 복학(군입대/군제대 포함)&lt;/font color&gt;">
+            <div class="product-img"><span class="img"><img src="/pack/bbs/uploads/Site_BBS_26/020220110103707.jpg" width="293" height="195" alt="&lt;font color=blue&gt;[안내] 휴학과 복학(군입대/군제대 포함)&lt;/font color&gt;"  /></span></div>
+            <div class="product-txt">
+              <p>
+                <font color=blue>[안내] 휴학과 복학(군입대/군제대 포함)</font color>              </p>
+            </div>
+            <div class="product_info"> </div>
+            </a> </li>
+                    <li> <a href="/06_sub/02_sub.html?no=3670&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_25" title="&lt;font color=red&gt;[코로나-19] 방역관리 협조 요청(22.1.3.기준)&lt;/font color&gt;">
+            <div class="product-img"><span class="img"><img src="/pack/bbs/uploads/Site_BBS_25/020220106095734.jpg" width="293" height="195" alt="&lt;font color=red&gt;[코로나-19] 방역관리 협조 요청(22.1.3.기준)&lt;/font color&gt;"  /></span></div>
+            <div class="product-txt">
+              <p>
+                <font color=red>[코로나-19] 방역관리 협조 요청(22.1.3.기준)</font color>              </p>
+            </div>
+            <div class="product_info"> </div>
+            </a> </li>
+          </ul><ul>          <li> <a href="/06_sub/02_sub.html?no=3666&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_25" title="[모집] 제1회 지역선도대학육성사업 프로그램 참여 에세이 공모전 개최 안내">
+            <div class="product-img"><span class="img"><img src="/pack/bbs/uploads/Site_BBS_25/020211230180721.jpg" width="293" height="195" alt="[모집] 제1회 지역선도대학육성사업 프로그램 참여 에세이 공모전 개최 안내"  /></span></div>
+            <div class="product-txt">
+              <p>
+                [모집] 제1회 지역선도대학육성사업 프로그램 참여 에세이 공모전 개최 안내              </p>
+            </div>
+            <div class="product_info"> </div>
+            </a> </li>
+                    <li> <a href="/06_sub/02_sub.html?no=3665&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_25" title="[모집] 대경권 SW산학프로젝트 경진대회 개최 안내">
+            <div class="product-img"><span class="img"><img src="/pack/bbs/uploads/Site_BBS_25/020211230170210.jpg" width="293" height="195" alt="[모집] 대경권 SW산학프로젝트 경진대회 개최 안내"  /></span></div>
+            <div class="product-txt">
+              <p>
+                [모집] 대경권 SW산학프로젝트 경진대회 개최 안내              </p>
+            </div>
+            <div class="product_info"> </div>
+            </a> </li>
+                    <li> <a href="/06_sub/01_sub.html?no=480&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_14" title="우리 학부 서영균/탁병철 교수 연구팀, 2021년 한국정보과학회 컴퓨터시스템소사이어티 우수논문상 수상">
+            <div class="product-img"><span class="img"><img src="/pack/bbs/uploads/Site_BBS_14/020211229105935.jpg" width="293" height="195" alt="우리 학부 서영균/탁병철 교수 연구팀, 2021년 한국정보과학회 컴퓨터시스템소사이어티 우수논문상 수상"  /></span></div>
+            <div class="product-txt">
+              <p>
+                우리 학부 서영균/탁병철 교수 연구팀, 2021년 한국정보과학회 컴퓨터시스템소사이어티 우수논문상 수상              </p>
+            </div>
+            <div class="product_info"> </div>
+            </a> </li>
+                    <li> <a href="/06_sub/02_sub.html?no=3663&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_25" title="2021년 대학생활 멘토링/힐링 프로그램 책자 안내(E-Book)">
+            <div class="product-img"><span class="img"><img src="/pack/bbs/uploads/Site_BBS_25/020211228163451.png" width="293" height="195" alt="2021년 대학생활 멘토링/힐링 프로그램 책자 안내(E-Book)"  /></span></div>
+            <div class="product-txt">
+              <p>
+                2021년 대학생활 멘토링/힐링 프로그램 책자 안내(E-Book)              </p>
+            </div>
+            <div class="product_info"> </div>
+            </a> </li>
+          </ul>        </div>
+        <!-- E : 갤러리 --> 
+        
+     
+      
+      
+      
+        
+        
+      </div>
+      <!-- //content --> 
+      
+    </section>
+    
+    
+    
+     <!-- D-day -->
+<div id="grayArea" class="mb-50">
+	<div class="gray">
+	<p class="txt">주요 사항들의 마감기한을 알려드립니다.</p>
+		<div id="d-day" class="cm-tab-container">
+			<h4>D-day</h4>
+
+			<ul class="d-dayMenu cm-tab-list">
+				<li class="d-day_all active selected"><a href="#D-Con01">전체</a></li>
+				<li class="d-day_undergraduate"><a href="#D-Con02">학부</a></li>
+				<li class="d-day_graduate"><a href="#D-Con03">대학원</a></li>
+				<li class="d-day_job"><a href="#D-Con04">학부인재모집</a></li>
+				<li class="d-day_seminar"><a href="#D-Con05">세미나</a></li>
+			</ul>
+			
+			<div class="d-dayList cm-tab-content-wrapper">
+				<ul class="d-day_list cm-tab-con" id="D-Con01">
+					<li><a href="/06_sub/02_sub_3.html?no=356&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_27"  title="2021 AI Speaker 데이터분석 교육 실시 안내 및 참가학생 모집"><span class="d-day" style="background-color:#5d7cb2">D-4</span>  <span class="d-day" style="background-color: #aaa;">심컴</span>2021 AI Speaker 데이터분석 교육 실시 안내 및 참가학생 모집</a> </li><li><a href="/06_sub/02_sub_2.html?no=945&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_26"  title="[수업] 2022학년도 1학기 수강꾸러미 신청 안내"><span class="d-day" style="background-color:#5d7cb2">D-7</span>  <span class="d-day" style="background-color: #aaa;">학사</span>[수업] 2022학년도 1학기 수강꾸러미 신청 안내</a>  <img src='/img/main/icon-new.png' alt='' /></li><li><a href="/06_sub/02_sub.html?no=3665&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_25"  title="[모집] 대경권 SW산학프로젝트 경진대회 개최 안내"><span class="d-day" style="background-color:#5d7cb2">D-8</span> [모집] 대경권 SW산학프로젝트 경진대회 개최 안내</a> </li><li><a href="/06_sub/02_sub.html?no=3666&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_25"  title="[모집] 제1회 지역선도대학육성사업 프로그램 참여 에세이 공모전 개최 안내"><span class="d-day" style="background-color:#5d7cb2">D-8</span> [모집] 제1회 지역선도대학육성사업 프로그램 참여 에세이 공모전 개...</a> </li><li><a href="/06_sub/02_sub_2.html?no=944&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_26"  title="교직]2021학년도 2학기 교직 적성 및 인성검사(3차) 부적격자 교육프로그램 안내"><span class="d-day" style="background-color:#5d7cb2">D-8</span>  <span class="d-day" style="background-color: #aaa;">학사</span>교직]2021학년도 2학기 교직 적성 및 인성검사(3차) 부적격자 ...</a> </li><li><a href="/06_sub/02_sub_2.html?no=942&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_26"  title="[졸업] 2022년 2월 졸업예정자 학사학위취득의 유예 선발 안내(~1/26)"><span class="d-day" style="background-color:#5d7cb2">D-13</span>  <span class="d-day" style="background-color: #aaa;">학사</span>[졸업] 2022년 2월 졸업예정자 학사학위취득의 유예 선발 안내(...</a> </li><li><a href="/06_sub/02_sub.html?no=3659&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_25"  title="[장학] 2021학년도 2학기 학부생 학업지원 장학금 지원대상자 제출 안내 (~1/27)"><span class="d-day" style="background-color:#5d7cb2">D-14</span> [장학] 2021학년도 2학기 학부생 학업지원 장학금 지원대상자 제...</a> </li>				</ul>
+				<ul class="d-day_list cm-tab-con" id="D-Con02">
+					<li><a href="/06_sub/02_sub_3.html?no=356&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_27"  title="2021 AI Speaker 데이터분석 교육 실시 안내 및 참가학생 모집"><span class="d-day" style="background-color:#5d7cb2">D-4</span>  <span class="d-day" style="background-color: #aaa;">심컴</span>2021 AI Speaker 데이터분석 교육 실시 안내 및 참가학생 모집</a> </li><li><a href="/06_sub/02_sub_2.html?no=945&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_26"  title="[수업] 2022학년도 1학기 수강꾸러미 신청 안내"><span class="d-day" style="background-color:#5d7cb2">D-7</span>  <span class="d-day" style="background-color: #aaa;">학사</span>[수업] 2022학년도 1학기 수강꾸러미 신청 안내</a>  <img src='/img/main/icon-new.png' alt='' /></li><li><a href="/06_sub/02_sub.html?no=3665&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_25"  title="[모집] 대경권 SW산학프로젝트 경진대회 개최 안내"><span class="d-day" style="background-color:#5d7cb2">D-8</span> [모집] 대경권 SW산학프로젝트 경진대회 개최 안내</a> </li><li><a href="/06_sub/02_sub.html?no=3666&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_25"  title="[모집] 제1회 지역선도대학육성사업 프로그램 참여 에세이 공모전 개최 안내"><span class="d-day" style="background-color:#5d7cb2">D-8</span> [모집] 제1회 지역선도대학육성사업 프로그램 참여 에세이 공모전 개...</a> </li><li><a href="/06_sub/02_sub_2.html?no=944&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_26"  title="교직]2021학년도 2학기 교직 적성 및 인성검사(3차) 부적격자 교육프로그램 안내"><span class="d-day" style="background-color:#5d7cb2">D-8</span>  <span class="d-day" style="background-color: #aaa;">학사</span>교직]2021학년도 2학기 교직 적성 및 인성검사(3차) 부적격자 ...</a> </li><li><a href="/06_sub/02_sub_2.html?no=942&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_26"  title="[졸업] 2022년 2월 졸업예정자 학사학위취득의 유예 선발 안내(~1/26)"><span class="d-day" style="background-color:#5d7cb2">D-13</span>  <span class="d-day" style="background-color: #aaa;">학사</span>[졸업] 2022년 2월 졸업예정자 학사학위취득의 유예 선발 안내(...</a> </li><li><a href="/06_sub/02_sub.html?no=3659&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_25"  title="[장학] 2021학년도 2학기 학부생 학업지원 장학금 지원대상자 제출 안내 (~1/27)"><span class="d-day" style="background-color:#5d7cb2">D-14</span> [장학] 2021학년도 2학기 학부생 학업지원 장학금 지원대상자 제...</a> </li>				</ul>
+				<ul class="d-day_list cm-tab-con" id="D-Con03">
+                    <li><a href="../06_sub/02_sub_6.html?no=531&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_24" title="﻿[장학] 2021학년도 2학기 학부생 학업지원 장학금 지원대상자 제출 안내 (~1/27)"><span class="d-day" style="background-color:#3fa6c5">D-14</span> ﻿[장학] 2021학년도 2학기 학부생 학업지원 장학금 지원대상...</a> </li><li><a href="../06_sub/02_sub_6.html?no=534&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_24" title="[연구] 2021학년도 대학원생 국제학술연구논문 교정(Edit)지원 사업 시행 재안내"><span class="d-day" style="background-color:#3fa6c5">D-46</span> [연구] 2021학년도 대학원생 국제학술연구논문 교정(Edit)지원...</a> </li>				</ul>
+				<ul class="d-day_list cm-tab-con" id="D-Con04">
+                    				</ul>
+				<ul class="d-day_list cm-tab-con" id="D-Con05">
+                    				</ul>
+			</div>			
+		</div>
+        
+		<div id="videoLink">
+			<div id="video" class="video_w">
+				<!--h4>홍보동영상</h4-->
+					<iframe width="100%" height="315" src="https://www.youtube.com/embed/gAuiHzh-PmM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+
+			<div id="video" class="video_m">
+				<div style="position: relative; height:0; padding-bottom: 56.25%;">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/gAuiHzh-PmM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; width:100%; height:100%;"></iframe>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+      <!-- //D-day -->
+    
+    
+    <!-- 공지1 -->
+     <div class="section area" style="padding-top:20px;"> 
+        <div id="mainNoticeWrapper" class="clearfix">
+        
+         <!-- 왼쪽 학부공지사항 --> 
+          <div id="mainNoticeCon">
+            <div class="main-notice-inner">
+              <div class="main-notice-tab-container">
+                <ul class="main-notice-tab-list clearfix">
+                  <li class="selected"><a href="../06_sub/02_sub.html"><span>학부 공지사항</span></a></li>
+                </ul>
+                <div class="main-notice-tab-content-wrapper">
+                  <div> <a href="../06_sub/02_sub.html" class="notice-more-btn"><img src="../img/main/btn-more.png" alt="학부 공지사항 더보기" /></a>
+                    <ul class="notice-comm-list">
+                    <li><a href="/06_sub/02_sub_4.html?no=40&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_29"  title="▣ 글솝 졸업요건: 창업교과목 인정 목록 안내 ★수정안내 필독★"> <span class="d-day" style="background-color: #aaa;">글솝</span>▣ 글솝 졸업요건: 창업교과목 인정 목록 안내 ★수정안내 필독★</a>  <img src='/img/main/icon-new.png' alt='' /><span class="date">2022-01-13</span></li><li><a href="/06_sub/02_sub.html?no=3672&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_25"  title="[안내] ICT COG Academy 블록체인 입문과정 교육"><span class="d-day" style="background-color:#5d7cb2">D-15</span> [안내] ICT COG Academy 블록체인 입문과정 교육</a>  <img src='/img/main/icon-new.png' alt='' /><span class="date">2022-01-13</span></li><li><a href="/06_sub/02_sub_2.html?no=946&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_26"  title="[복수전공] 이수포기 온라인 신청 중지 및 수기 신청 안내(2022년2월졸업예정자)"><span class="d-day" style="background-color:#5d7cb2">D-28</span>  <span class="d-day" style="background-color: #aaa;">학사</span>[복수전공] 이수포기 온라인 신청 중지 및 수기 신청 안내(2022년2월졸업예정자)</a>  <img src='/img/main/icon-new.png' alt='' /><span class="date">2022-01-13</span></li><li><a href="/06_sub/02_sub_2.html?no=945&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_26"  title="[수업] 2022학년도 1학기 수강꾸러미 신청 안내"><span class="d-day" style="background-color:#5d7cb2">D-7</span>  <span class="d-day" style="background-color: #aaa;">학사</span>[수업] 2022학년도 1학기 수강꾸러미 신청 안내</a>  <img src='/img/main/icon-new.png' alt='' /><span class="date">2022-01-13</span></li><li><a href="/06_sub/02_sub_3.html?no=356&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_27"  title="2021 AI Speaker 데이터분석 교육 실시 안내 및 참가학생 모집"><span class="d-day" style="background-color:#5d7cb2">D-4</span>  <span class="d-day" style="background-color: #aaa;">심컴</span>2021 AI Speaker 데이터분석 교육 실시 안내 및 참가학생 모집</a> <span class="date">2022-01-12</span></li><li><a href="/06_sub/02_sub.html?no=3671&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_25"  title="[교외] 스마트양식장 뱀장어 평균 중량 인식모델 개발 온라인 해커톤">[교외] 스마트양식장 뱀장어 평균 중량 인식모델 개발 온라인 해커톤</a> <span class="date">2022-01-12</span></li><li><a href="/06_sub/02_sub_4.html?no=39&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_29"  title="[졸업] 졸업예정자 준비 사항 안내_22년 8월 예정자 필독!!!"><span class="d-day" style="background-color:#5d7cb2">D-24</span>  <span class="d-day" style="background-color: #aaa;">글솝</span>[졸업] 졸업예정자 준비 사항 안내_22년 8월 예정자 필독!!!</a> <span class="date">2022-01-11</span></li>                    </ul>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- //왼쪽 --> 
+          
+          <!-- 오른쪽 진로 및 채용정보-->
+          
+          <div id="mainArticleCon2">
+            <div class="main-notice-inner">
+              <div class="main-notice-tab-container ">
+                <ul class="main-notice-tab-list  clearfix">
+                  <li class="selected"><a href="../06_sub/03_sub.html"><span>취업정보</span></a></li>
+                </ul>
+                <div class="main-notice-tab-content-wrapper ">
+                  <div> <a href="../06_sub/03_sub.html" class="notice-more-btn"><img src="../img/main/btn-more.png" alt="취업정보 더보기" /></a>
+                    <ul class="notice-comm-list">
+                    <li><a href="../06_sub/03_sub.html?no=1246&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_4" title="~01/23 ] 네패스 22년 상반기 채용 연계형  인턴 채용공고">~01/23 ] 네패스 22년 상반기 채용 연계형  인턴 채용공고</a>  <img src='/img/main/icon-new.png' alt='' /><span class="date">2022-01-13</span></li><li><a href="../06_sub/03_sub.html?no=1245&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_4" title="[롯데정보통신] 2022년 1분기 전직무 대규모 채용 (~1/23)">[롯데정보통신] 2022년 1분기 전직무 대규모 채용 (~1/23)</a> <span class="date">2022-01-11</span></li><li><a href="../06_sub/03_sub.html?no=1244&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_4" title="픽앤 주식회사에서 신입사원 채용 공고">픽앤 주식회사에서 신입사원 채용 공고</a> <span class="date">2022-01-10</span></li><li><a href="../06_sub/03_sub.html?no=1243&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_4" title="2022년 상반기 한화시스템 방산부문  신입사원 채용안내">2022년 상반기 한화시스템 방산부문  신입사원 채용안내</a> <span class="date">2022-01-06</span></li><li><a href="../06_sub/03_sub.html?no=1242&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_4" title="[티맥스그룹] 2022년 상반기 신입사원 공채 및 경력직 특별채용">[티맥스그룹] 2022년 상반기 신입사원 공채 및 경력직 특별채용</a> <span class="date">2022-01-05</span></li><li><a href="../06_sub/03_sub.html?no=1241&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_4" title="[롯데그룹] 2022년 롯데그룹 DT 인재 DB등록 이벤트 [~1/16(일)]">[롯데그룹] 2022년 롯데그룹 DT 인재 DB등록 이벤트 [~1/16(일)]</a> <span class="date">2022-01-03</span></li><li><a href="../06_sub/03_sub.html?no=1240&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_4" title="(주)완성 채용공고">(주)완성 채용공고</a> <span class="date">2021-12-27</span></li>                    </ul>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- //오른쪽 --> 
+          
+          
+           
+          
+        </div>
+        <!-- E : 공지1 --> 
+        
+        
+        <!-- 공지2 -->
+        <div id="mainNoticeWrapper" class="clearfix mb-100">
+        
+         
+          
+          
+          <!-- 왼쪽 대학원 공지사항 --> 
+          <div id="mainNoticeCon">
+            <div class="main-notice-inner">
+              <div class="main-notice-tab-container ">
+                <ul class="main-notice-tab-list  clearfix">
+                  <li class="selected"><a href="../06_sub/02_sub_6.htm"><span>대학원 공지사항</span></a></li>
+                </ul>
+                <div class="main-notice-tab-content-wrapper ">
+                  
+                  <div> <a href="../06_sub/02_sub_6.html" class="notice-more-btn"><img src="../img/main/btn-more.png" alt="대학원 공지사항 더보기" /></a>
+                    <ul class="notice-comm-list">
+                    <li><a href="../06_sub/02_sub_6.html?no=534&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_24" title="[연구] 2021학년도 대학원생 국제학술연구논문 교정(Edit)지원 사업 시행 재안내"><span class="d-day" style="background-color:#3fa6c5">D-46</span> [연구] 2021학년도 대학원생 국제학술연구논문 교정(Edit)지원 사업 시행 재안내</a> <span class="date">2022-01-11</span></li><li><a href="../06_sub/02_sub_6.html?no=533&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_24" title="대학원 재학생 대상 창업캠프 안내">대학원 재학생 대상 창업캠프 안내</a> <span class="date">2022-01-06</span></li><li><a href="../06_sub/02_sub_6.html?no=532&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_24" title="2022학년도 1학기 (일반, 특수)대학원 재입학자 선발 계획 안내">2022학년도 1학기 (일반, 특수)대학원 재입학자 선발 계획 안내</a> <span class="date">2022-01-04</span></li><li><a href="../06_sub/02_sub_6.html?no=531&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_24" title="﻿[장학] 2021학년도 2학기 학부생 학업지원 장학금 지원대상자 제출 안내 (~1/27)"><span class="d-day" style="background-color:#3fa6c5">D-14</span> ﻿[장학] 2021학년도 2학기 학부생 학업지원 장학금 지원대상자 제출 안내 ...</a> <span class="date">2021-12-23</span></li><li><a href="../06_sub/02_sub_6.html?no=530&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_24" title="2021년 2학기 'KNU CSE Thesis Award' 심사 결과 통보">2021년 2학기 'KNU CSE Thesis Award' 심사 결과 통보</a> <span class="date">2021-12-20</span></li><li><a href="../06_sub/02_sub_6.html?no=529&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_24" title="제7회 경북대학교 대학원동창회 학술상」공모 안내">제7회 경북대학교 대학원동창회 학술상」공모 안내</a> <span class="date">2021-12-20</span></li><li><a href="../06_sub/02_sub_6.html?no=528&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_24" title="2022학년도 1학기 일반대학원 전과 시행 계획 안내">2022학년도 1학기 일반대학원 전과 시행 계획 안내</a> <span class="date">2021-12-16</span></li>                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- //왼쪽 --> 
+          
+          <!-- 오른쪽 세미나 및 행사 더보기 -->
+          
+          <div id="mainArticleCon2">
+            <div class="main-notice-inner">
+              <div class="main-notice-tab-container ">
+                <ul class="main-notice-tab-list  clearfix">
+                  <li class="selected"><a href="../06_sub/05_sub.html"><span>세미나</span></a></li>
+                </ul>
+                <div class="main-notice-tab-content-wrapper">
+                 
+                  <div> <a href="../06_sub/05_sub.html" class="notice-more-btn"><img src="../img/main/btn-more.png" alt="세미나 더보기" /></a>
+                    <ul class="notice-comm-list">
+                    <li><a href="../06_sub/05_sub.html?no=165&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_2" title="21년12월16일, 소프트웨어재난연구센터, 산업제어시스템 보안-네트워크 강건성 시험">21년12월16일, 소프트웨어재난연구센터, 산업제어시스템 보안-네트워크 강건성 시험</a> <span class="date">2021-12-06</span></li><li><a href="../06_sub/05_sub.html?no=164&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_2" title="21년09월10일, 소프트웨어재난연구센터,Manifold-based machine learning testing">21년09월10일, 소프트웨어재난연구센터,Manifold-based machine...</a> <span class="date">2021-09-06</span></li><li><a href="../06_sub/05_sub.html?no=163&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_2" title="21년08월12일, 초연결융합기술연구소, &quot;Recent Trend of Neuromorphic Computing...">21년08월12일, 초연결융합기술연구소, "Recent Trend of Neuro...</a> <span class="date">2021-08-10</span></li><li><a href="../06_sub/05_sub.html?no=162&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_2" title="21년08월06일, 소프트웨어기술연구소, Mutation-based Fault Localization">21년08월06일, 소프트웨어기술연구소, Mutation-based Fault L...</a> <span class="date">2021-08-04</span></li><li><a href="../06_sub/05_sub.html?no=161&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_2" title="21년08월05일. 하계방학 MATLAB 온라인 세미나">21년08월05일. 하계방학 MATLAB 온라인 세미나</a> <span class="date">2021-07-28</span></li><li><a href="../06_sub/05_sub.html?no=160&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_2" title="21년07월15일, 초연결융합기술연구소, &quot;EdgeCPS 환경에서의 데이터 오프로딩(data offloading) 최신 기술 동향 및 연구 성과 소개&quot;">21년07월15일, 초연결융합기술연구소, "EdgeCPS 환경에서의 데이터 오프로...</a> <span class="date">2021-07-13</span></li><li><a href="../06_sub/05_sub.html?no=159&bbs_cmd=view&page=1&key=&keyfield=&bbs_code=Site_BBS_2" title="21년05월31일, 초연결융합기술연구소, &quot;Personalized Digital Health &amp; Therapeutics&quot; 워크샵">21년05월31일, 초연결융합기술연구소, "Personalized Digital ...</a> <span class="date">2021-05-27</span></li>                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- //오른쪽 --> 
+          
+        </div>
+        </div>
+        <!-- E : 공지2 -->
+        
+        
+    
+    
+    
+    <!-- S :  퀵메뉴  -->
+    <aside id="rightBar">
+      <ul>
+        <li class="quick-request"><a href="http://ipsi1.knu.ac.kr/ipsi1/main/index.jsp"  target="_blank" title="입학정보">
+          <div class="quick-icon"> <i class="material-icons off"><img src="../img/include/icon-quick-1.png" alt=""></i> <i class="material-icons on"><img src="../img/include/icon-quick-1.png" alt=""></i> </div>
+          <p>입학정보</p>
+          </a></li>
+        <li><a href="http://knu.ac.kr/wbbs/wbbs/user/yearSchedule/index.action?menu_idx=43" target="_blank" title="학사일정">
+          <div class="quick-icon"> <i class="material-icons off"><img src="../img/include/icon-quick-2.png" alt=""></i> <i class="material-icons on"><img src="../img/include/icon-quick-2.png" alt=""></i> </div>
+          <p>학사일정</p>
+          </a></li>
+        <li><a href="http://ssw.knu.ac.kr/" target="_blank" title="장학제도">
+          <div class="quick-icon"> <i class="material-icons off"><img src="../img/include/icon-quick-3.png" alt=""></i> <i class="material-icons on"><img src="../img/include/icon-quick-3.png" alt=""></i> </div>
+          <p>장학제도</p>
+          </a></li>
+        <li><a href="../05_sub/01_sub.html" title="국제교류">
+          <div class="quick-icon"> <i class="material-icons off"><img src="../img/include/icon-quick-4.png" alt=""></i> <i class="material-icons on"><img src="../img/include/icon-quick-4.png" alt=""></i> </div>
+          <p>국제교류</p>
+          </a></li>
+        <li><a href="http://abeek.knu.ac.kr" target="_blank" title="공학교육인증">
+          <div class="quick-icon"> <i class="material-icons off"><img src="../img/include/icon-quick-5.png" alt=""></i> <i class="material-icons on"><img src="../img/include/icon-quick-5.png" alt=""></i> </div>
+          <p>공학교육인증</p>
+          </a></li>
+        <li><a href="http://swedu.knu.ac.kr/" target="_blank" title="SW교육센터">
+          <div class="quick-icon"> <i class="material-icons off"><img src="../img/include/icon-quick-6.png" alt=""></i> <i class="material-icons on"><img src="../img/include/icon-quick-6.png" alt=""></i> </div>
+          <p>SW교육센터</p>
+          </a></li>
+      </ul>
+    </aside>
+    <!-- E :  퀵메뉴  --> 
+  </div>
+  <!-- //container --> 
+  
+  <!-- S : 푸터 -->
+  
+ 
+<script>
+	$(document).on('ready',function  () {
+		 $('.slider-for').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: false,
+			fade: true,
+			asNavFor: '.slider-nav'
+		});
+		$('.slider-nav').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			asNavFor: '.slider-for',
+			dots: true,
+			//centerMode: true,
+			focusOnSelect: true,
+			autoplay: true,
+			fade: true,
+			autoplaySpeed : 4500,
+			easing : 'easeOutCubic',
+		});
+
+		var w_width = window.innerWidth;
+			
+		$(".slick-track .visual-list-img").each(function  () {
+			if ( w_width <= 749) {
+				$(this).children("img").attr("src",$(this).children("img").attr("src").replace("_pc.jpg","_m.jpg"));
+			}else {
+				$(this).children("img").attr("src",$(this).children("img").attr("src").replace("_m.jpg","_pc.jpg"));
+			}
+		});
+		
+		$(window).resize(function  () {
+			var w_width = $(window).width();
+			
+			$(".slick-track .visual-list-img").each(function  () {
+				if ( w_width <= 749) {
+					$(this).children("img").attr("src",$(this).children("img").attr("src").replace("_pc.jpg","_m.jpg"));
+				}else {
+					$(this).children("img").attr("src",$(this).children("img").attr("src").replace("_m.jpg","_pc.jpg"));
+				}
+			});
+		});
+	})
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+	/* *********************** 탭 공통 ************************ */
+    $(".cm-tab-container").each(function  () {
+        var $cmTabList = $(this).children(".cm-tab-list");
+        var $cmTabListli = $cmTabList.find("li");
+        var $cmConWrapper = $(this).children(".cm-tab-content-wrapper");
+        var $cmContent = $cmConWrapper.children(".cm-tab-con");
+         
+         
+        // 탭 영역 숨기고 selected 클래스가 있는 영역만 보이게
+        var $selectCon = $cmTabList.find("li.selected").find("a").attr("href");
+        $cmContent.hide();
+        $($selectCon).show();
+ 
+        $cmTabListli.children("a").click(function  () {
+            if ( !$(this).parent().hasClass("selected")) {
+                var visibleCon = $(this).attr("href");
+                $cmTabListli.removeClass("selected");
+                $(this).parent("li").addClass("selected");
+                $cmContent.hide();
+                $(visibleCon).fadeIn();
+            }
+            return false;
+        });
+    });
+})
+</script>
+<script>
+	$(function  () {
+		dep1 = 0,
+		dep2 = 0;
+
+		// 탑배너 롤링
+		$(".top-banner-list-con").slick({
+			dots: true,
+			infinite: true,
+			arrows:false,
+			pauseOnHover:false,
+			autoplay:true,
+			autoplaySpeed: 5000,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			fade:true
+		});
+		// 탑배너 닫기
+		$(".banner-close-btn .close-btn").click(function  () {
+			$("#topBanner").slideUp();
+		});
+	});
+
+function setCookie( name, value, expiredays )
+{
+	var todayDate = new Date();
+	todayDate.setDate( todayDate.getDate() + expiredays );
+	document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+}
+
+function closeWin(){
+	if ( document.popuptop_form.popup_end.checked ) {
+		setCookie( 'POPUPTOP_COOKIE', 'NO', 1 );//쿠기 저장 기간은 1일로 한다.
+	}
+} 
+
+</script>
+  <style>
+  /* Footer
+------------------------------------------------------ */
+.section{position:relative}
+#footer{clear:both;width:100%;padding:0;}
+#footer:after {display:block;visibility:hidden;clear:both;content:""}
+#footer .section01 {background:#fff;position:relative;height:68px;}
+#footer .section01 h1 {position:absolute;top:15px;left:0;}
+#footer .section01 .sns {position:absolute;top:20px;right:0;}
+#footer .section02 {background:#313437;position:relative;height:52px;border-bottom:1px solid #252526;}
+#footer .section02 .link {position:absolute;top:15px;left:0;}
+#footer .section02 .link a {color:#aaa; padding:0 15px;border-right:1px solid #6d6d6e; font-size:12px}
+#footer .section02 .link a:last-child {border-right:none;}
+
+#footer .section02 .icon {position:absolute; right:0; text-align:right}
+#footer .section02 .icon a {float: right;}
+#footer .section02 .icon a:last-child {right:0;}
+
+
+#footer .section03 {background:#3d4044;position:relative;padding:30px 0 50px 0;}
+#footer .section03 .select {position:absolute;top:0px;right:0;}
+#footer .section03 .select select {background:#3d4044;color:#fff; padding:10px 10px;border:1px solid #6d6d6e;width:180px; }
+#footer .address{display:inline-block; margin:0 0 0 18px; line-height:22px; color:#e1e1e1; font-weight:300; letter-spacing:0px;  font-size:14px}
+
+
+/* 푸터 */
+#m-footerInner{width:100%; display:none;}
+#m-footerInner .footer-top{padding:3% 5%; background-color:#2b2b2c;}
+.footer-top ul.footer-list{width:100%; margin:0 auto;}
+.footer-top ul.footer-list li{display:inline-block; vertical-align:top; width:24%; text-align:center;}
+.footer-top ul.footer-list li a{font-size:16px; color:#aaa;}
+.footer-top ul.footer-list li:first-child a{color:#aaa;}
+#m-footerInner .footer-bottom{width:100%; padding:5% 0 10% 0; background-color:#353536; text-align:center;}
+.footer-bottom > p, .footer-bottom > span{display:inline-block; width:96%; margin:0 auto; text-align:center; color:#fff;}
+.footer-bottom > p{margin-bottom:3%; line-height:22px;}
+.footer-bottom > span > strong{font-weight:normal; color:#c3c3c3;}
+#m-footerInner .footer-sns{width:94%; padding:3%; background:url(/images/layout/footer_logo.png) no-repeat 3% center; text-align:right;}
+.footer-sns .sns-list{display:inline-block; width:49%; text-align:right;}
+.footer-sns .sns-list li{display:inline-block; vertical-align:top; padding:0 2%;}
+.footer-sns .sns-list li .fa{font-size:30px; color:#000;}
+
+/* footer :: familybox */
+.familysite-box{position:relative; width:240px; float:right; /*margin-top:25px;*/}
+.familysite-box > a{display:block; height:40px; line-height:40px; text-indent:20px; border:1px solid #b0b0b0; background-color:#3d4044; color:#fff; font-size:14px;}
+.familysite-box > a i{position:absolute; right:15px; top:7px;}
+.family-list{position:absolute; bottom:30px; left:0px; width:238px;  padding:10px 0; background-color:#3d4044; border:1px solid #b0b0b0; border-bottom:0;  z-index:11; display:none; }
+.family-list a{display:block; padding:10px 15px; color:#fff; letter-spacing:-0.5px; font-size:14px;}
+.family-list a:hover{color:#c48b3a}
+
+@media all and (max-width:768px){
+	/* FOOTER */
+	.footer-bottom > p{font-size:12px; line-height:20px;}
+	.footer-bottom > span{font-size:10px;}
+}
+@media all and (max-width:1220px){
+	#m-gnb{display:block; width:100%; height:100%; position:fixed; top:0px; right:-100%;  z-index:9999; overflow-y:auto; overflow-x:hidden; background:url(/images/layout/m_gnb_bg.jpg) repeat-y right top; background-size:70% auto; max-width:400px;}
+	/* Footer
+	------------------------------------------------------ */
+	#footerInner{display:none;}
+	#m-footerInner{display:block;}
+	}
+	
+	@media all and (max-width:479px){
+	
+	/* footer
+	------------------------------------------------------ */
+	#m-footerInner .footer-top{padding:4% 0;}
+	.footer-top ul.footer-list li{width:49%; margin-bottom:2%;}
+	.footer-top ul.footer-list li.marn{margin-bottom:0;}
+	.footer-top ul.footer-list li a{font-size:12px;}
+	#m-footerInner .footer-sns{background-size:150px auto;}
+	.footer-sns .sns-list li .fa{font-size:20px; color:#000;}
+	.footer-sns .sns-list li img{width:13px;}
+	}
+	
+	
+  </style>
+   <div class="btn_top"> <a href="#"></a> </div>
+<!-- S : 푸터 -->
+	<footer id="footer">
+		<div id="footerInner">
+			<div class="section02">
+				<div class="section area">
+					<div class="link">
+						<a href="../07_sub/04_sub.html">개인정보처리방침 </a>
+						<a href="../07_sub/05_sub.html">이메일무단수집거부 </a>
+						<a href="../01_sub/05_sub.html">오시는 길</a>
+						
+					</div>
+					
+                    <div class="icon">
+                    <a href="https://www.instagram.com/knu_cse_pr/" target="_blank"><img src="../img/include/instagram.png"/></a>
+						<a href="https://www.facebook.com/CSEatKNU/" target="_blank"><img src="../img/include/facebook.png"/></a>
+						
+						
+					</div>
+					
+                    
+                    
+                    
+			  </div>
+			</div>
+			<div class="section03">
+				<div class="section area">
+					<p class="address">경북대학교 IT대학 컴퓨터학부<br />
+우)41566  대구광역시 북구 대학로 80 / IT대학 융복합관 317호(건물번호 : 415)<br />
+TEL. 053-950-5550/6370&nbsp;&nbsp;&nbsp;FAX. 053-957-4846&nbsp;&nbsp;&nbsp;E-mail. scse@knu.ac.kr<br/>
+					Copyright 2019 KNU CSE All rights reserved</p>
+					<p class="select">
+                    
+                    
+                    <aside class="familysite-box">
+							<a href="" class="family-open-btn">학부관련연구소<i class="material-icons">&#xE313;</i></a>
+							<ul class="family-list">
+								<li><a href="http://www.knuiedt.re.kr" target="_blank" title="새창으로열기">공학설계연구소</a></li>
+								<li><a href="http://brain.knu.ac.kr" target="_blank" title="새창으로열기">뇌과학연구소</a></li>
+								<li><a href="http://daci.knu.ac.kr" target="_blank" title="새창으로열기">디지털아트컨텐츠연구소</a></li>
+                                <li><a href="http://robic.knu.ac.kr/" target="_blank" title="새창으로열기">로봇산업진흥센터</a></li>
+								<li><a href="http://www.necst.or.kr/" target="_blank" title="새창으로열기">모바일디스플레이산학연센터</a></li>
+								<li><a href="http://www.escrc.re.kr/" target="_blank" title="새창으로열기">산업기술연구소</a></li>
+                                <li><a href="http://selab.knu.ac.kr/soft/?mid=welcome" target="_blank" title="새창으로열기">소프트웨어기술연구소</a></li>
+                                
+								<li><a href="#">의료정보원천기술연구소</a></li>
+                                <li><a href="http://www.escrc.re.kr/" target="_blank" title="새창으로열기">임베디드소프트웨어연구센터</a></li>
+                                <li><a href="http://iet.knu.ac.kr/" target="_blank" title="새창으로열기">전자기술연구소</a></li>
+                                <li><a href="http://csos.knu.ac.kr/" target="_blank" title="새창으로열기">자율군집소프트웨어 플랫폼 연구센터</a></li>
+								<li><a href="http://connected.knu.ac.kr/" target="_blank" title="새창으로열기">초연결융합기술연구소</a></li>
+							</ul>
+                            
+                            
+						</aside>
+                    
+						<aside class="familysite-box">
+							<a href="" class="family-open-btn">바로가기<i class="material-icons">&#xE313;</i></a>
+							<ul class="family-list">
+								<li><a href="http://swedu.knu.ac.kr/" target="_blank" title="새창으로열기">SW중심대학사업단</a></li>
+								<li><a href="http://prime.knu.ac.kr/" target="_blank" title="새창으로열기">프라임사업단</a></li>
+								<li><a href="http://bk21plus.knu.ac.kr/index.php" target="_blank" title="새창으로열기">BK21플러스사업단</a></li>
+                                <li><a href="http://linc.knu.ac.kr/" target="_blank" title="새창으로열기">LINC사업단</a></li>
+								<li><a href="http://abeek.knu.ac.kr/" target="_blank" title="새창으로열기">KNU ABEEK</a></li>
+								<li><a href="http://swedu.knu.ac.kr" target="_blank" title="새창으로열기">소프트웨어교육센터</a></li>
+                                <li><a href="http://fric.knu.ac.kr/new/" target="_blank" title="새창으로열기">외국학술지지원센터</a></li>
+								<li><a href="http://hustar-ict.knu.ac.kr" target="_blank" title="새창으로열기">HuStar ICT 혁신대학사업단</a></li>
+							</ul>
+                            
+                            
+						</aside>
+                        
+                        
+					</p>
+				</div>
+			</div>
+		</div>
+        
+        <!-- 모바일 -->
+		<div id="m-footerInner">
+			<div class="footer-sns" style="display:none;">
+				<ul class="sns-list">
+					<li><a href="" target="_blank" title="새창으로 이동"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li><a href="" target="_blank" title="새창으로 이동"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<li><a href="" target="_blank" title="새창으로 이동"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+					<li><a href="" target="_blank" title="새창으로 이동"><img src="https://kast.or.kr/images/layout/icon_blog.png" alt=""></a></li>
+					<li><a href="" target="_blank" title="새창으로 이동"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+				</ul>
+			</div>
+			<div class="footer-top">
+				<ul class="footer-list">
+					<li><a href="../07_sub/04_sub.html">개인정보처리방침 </a></li>
+					<li><a href="../07_sub/05_sub.html">이메일무단수집거부 </a></li>
+					<!--li><a href="../01_sub/05_sub.html">오시는 길</a></li-->
+					
+				</ul>
+			</div>
+			<div class="footer-bottom">
+			<p>
+                    <a href="https://www.instagram.com/knu_cse_pr/" target="_blank"><img src="../img/include/instagram.png"/></a>
+						<a href="https://www.facebook.com/CSEatKNU/" target="_blank"><img src="../img/include/facebook.png"/></a>
+						
+						
+					</p>
+					
+				<p>대구광역시 북구 대학로 80 / IT대학 융복합관 317호(건물번호 : 415)<br/>
+				<span style="color:#fff;">Tel : 053-950-5550. 6370</span>  /  <span style="color:#fff">Fax : 053-957-4846</span><br/>
+				E-mail : scse@knu.ac.kr</p>
+				<span><strong> Copyright 2019 </strong> KNU CSE <strong> All rights reserved</strong></span>
+			</div>
+		</div>
+           
+	</footer>
+	
+	<!-- E : 푸터 -->  <!-- E : 푸터 --> 
+</div>
+</body>
+</html>
+
